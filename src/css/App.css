@@ -1,0 +1,138 @@
+/* Reset */
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+
+.container {
+    width: 100%;
+}
+
+
+/* Navbar */
+.navbar {
+    background: #FFF;
+    /* box-shadow: 0 1px 3px #BDBDBD; */
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    padding: 1.5rem 0;
+    width: 100%;
+}
+
+.contact-tag {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.fa-circle {
+    margin-right: 0.5rem;
+    color: #00E676;
+    font-size: 0.9rem;
+}
+
+
+
+/* Chat interface */
+.chat-interface {
+    margin: 50px auto 0;
+    width: 400px;
+    padding: 1rem;
+}
+
+.conv-wrapper {
+    background: #FFF;
+    padding-bottom: 7rem;
+}
+
+/* Speech bubbles */
+.conv-wrapper ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-row-gap: 2rem; */
+    color: #424242;
+}
+
+.user-speech,
+.bot-speech {
+    max-width: 150px;
+    animation: scale 0.3s ease-in;
+    -webkit-animation: scale 0.3s ease-in;
+    margin-bottom: 2rem;
+}
+@keyframes scale {
+    0% {
+        opacity: 0; 
+        -webkit-transform: scale(0, 0); 
+    }
+    
+    100% { 
+        opacity: 1;
+        -webkit-transform: scale(1, 1); 
+    }
+}
+
+.user-speech {
+    background: #29B6F6;
+    padding: 1rem;
+    border-radius: 20px 20px 0 20px;
+        justify-self: right;
+        
+        /* For IE or MS Edge */
+        float: right;
+        clear: both;
+    }
+
+    .bot-speech {
+    background: #81D4FA;
+    padding: 1rem;
+    border-radius: 20px 20px 20px 0;
+    justify-self: left;
+
+    /* For IE or MS Edge */
+    float: left;
+    clear: both;
+}
+
+
+/* Input field */
+.input-wrapper {
+    position: fixed;
+    background: #FFF;
+    margin-right: 1rem;
+    bottom: 0;
+    padding-bottom: 3rem;
+    width: inherit;
+}
+
+.input-wrapper form input {
+    width: 100%;    
+    padding: 0.8rem 0;
+    margin-top: 1rem;
+    border: none;
+    border-bottom: 1px solid #BDBDBD;
+    font-size: 1rem;
+}
+
+.input-wrapper form input:focus {
+    outline: none;
+    border-color: #03A9F4;
+}
+
+
+
+/* Media query */
+
+/* Fullscreen mode - Does not work in Edge */ 
+@media (device-width: 100vw) and (device-height: 100vh) {
+    
+    .chat-interface {
+        margin: 100px auto 0;
+        width: 450px;
+    }
+
+  }

@@ -1,0 +1,19 @@
+@import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  font-family: sans-serif;
+}
+
+/* Effects */
+a, input, button {
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+}
+
+/* Scroll bar */
+.conv-wrapper::-webkit-scrollbar {
+  background: transparent;
+}
