@@ -16,9 +16,8 @@ li {
 /* Navbar */
 .navbar {
     background: #FFF;
-    /* box-shadow: 0 1px 3px #BDBDBD; */
     position: fixed;
-    z-index: 99999;
+    z-index: 1;
     top: 0;
     padding: 1.5rem 0;
     width: 100%;
@@ -40,7 +39,7 @@ li {
 /* Chat interface */
 .chat-interface {
     margin: 50px auto 0;
-    width: 400px;
+    width: 500px;
     padding: 1rem;
 }
 
@@ -60,44 +59,64 @@ li {
 .user-speech,
 .bot-speech {
     max-width: 150px;
-    animation: scale 0.3s ease-in;
-    -webkit-animation: scale 0.3s ease-in;
+    padding: 0.7rem 1rem;
     margin-bottom: 2rem;
 }
-@keyframes scale {
-    0% {
-        opacity: 0; 
-        -webkit-transform: scale(0, 0); 
-    }
-    
-    100% { 
-        opacity: 1;
-        -webkit-transform: scale(1, 1); 
-    }
-}
+
 
 .user-speech {
     background: #29B6F6;
-    padding: 1rem;
+    color: #FFF;
     border-radius: 20px 20px 0 20px;
         justify-self: right;
         
         /* For IE or MS Edge */
         float: right;
         clear: both;
-    }
 
-    .bot-speech {
-    background: #81D4FA;
-    padding: 1rem;
+    animation: scale 0.3s ease-in;
+    -webkit-animation: scale-right 0.3s ease-in;
+}
+@keyframes scale-right {
+    0% {
+        opacity: 0; 
+        -webkit-transform: scale(0, 0); 
+        -webkit-transform-origin: right bottom;
+    }
+    
+    100% { 
+        opacity: 1;
+        -webkit-transform: scale(1, 1); 
+        -webkit-transform-origin: right bottom;
+    }
+}
+
+
+.bot-speech {
+    background: #EEE;
     border-radius: 20px 20px 20px 0;
     justify-self: left;
 
     /* For IE or MS Edge */
     float: left;
     clear: both;
-}
 
+    animation: scale 0.3s ease-in;
+    -webkit-animation: scale-left 0.3s ease-in;
+}
+@keyframes scale-left {
+    0% {
+        opacity: 0; 
+        -webkit-transform: scale(0, 0); 
+        -webkit-transform-origin: left bottom;
+    }
+    
+    100% { 
+        opacity: 1;
+        -webkit-transform: scale(1, 1); 
+        -webkit-transform-origin: left bottom;
+    }
+}
 
 /* Input field */
 .input-wrapper {
@@ -132,7 +151,14 @@ li {
     
     .chat-interface {
         margin: 100px auto 0;
-        width: 450px;
     }
 
   }
+
+
+/* 600px */
+@media (max-width: 600px) {
+    .chat-interface {
+        width: 80%;
+    }
+}
