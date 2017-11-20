@@ -41,18 +41,18 @@ li {
     margin: 50px auto 0;
     width: 500px;
     padding: 1rem;
+    margin-bottom: 5rem;
+    overflow: hidden;
 }
 
 .conv-wrapper {
     background: #FFF;
-    padding-bottom: 7rem;
 }
 
 /* Speech bubbles */
 .conv-wrapper ul {
-    display: grid;
-    grid-template-columns: 1fr;
-    /* grid-row-gap: 2rem; */
+    /* display: grid; */
+    /* grid-template-columns: 1fr; */
     color: #424242;
 }
 
@@ -61,6 +61,7 @@ li {
     max-width: 150px;
     padding: 0.7rem 1rem;
     margin-bottom: 2rem;
+    word-wrap: break-word;
 }
 
 
@@ -68,7 +69,7 @@ li {
     background: #29B6F6;
     color: #FFF;
     border-radius: 20px 20px 0 20px;
-        justify-self: right;
+        /* justify-self: right; */
         
         /* For IE or MS Edge */
         float: right;
@@ -95,7 +96,7 @@ li {
 .bot-speech {
     background: #EEE;
     border-radius: 20px 20px 20px 0;
-    justify-self: left;
+    /* justify-self: left; */
 
     /* For IE or MS Edge */
     float: left;

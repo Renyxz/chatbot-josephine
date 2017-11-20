@@ -35,6 +35,11 @@ class Chat extends Component {
         const userInput = this.state.userInput;
         const speech = userInput.speech;
 
+        // Empty input
+        if(speech === '') {
+            return;
+        }
+
         // Conversation speed
         setTimeout( () => {
             // Add user speech to conversation state
@@ -63,6 +68,7 @@ class Chat extends Component {
 
     talkToBot(speech) {
         // Talk to chatbot
+
         const promise = client.textRequest(speech);
         
                 // Successful request
@@ -101,8 +107,11 @@ class Chat extends Component {
             const speechBubble = name === 'user' ? 'user-speech' : 'bot-speech';
 
             return(
-                <li className={ speechBubble }
-                    key={ id }>{ speech }</li>
+                <li className={ speechBubble } key={ id }>
+                    <div>
+                    { speech }
+                    </div>
+                </li>
             );
         });
 
