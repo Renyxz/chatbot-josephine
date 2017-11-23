@@ -147,16 +147,6 @@ li {
 
 /* Media query */
 
-/* Fullscreen mode - Does not work in Edge */ 
-@media (device-width: 100vw) and (device-height: 100vh) {
-    
-    .chat-interface {
-        margin: 100px auto 0;
-    }
-
-  }
-
-
 /* 600px */
 @media (max-width: 600px) {
     .chat-interface {
